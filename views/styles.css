@@ -1,0 +1,48 @@
+@font-face {
+    font-family: hp;
+    src: url(../fonts/HARRYP__.TTF);
+}
+
+@font-face {
+    font-family: cinzel;
+    src: url(../fonts/Cinzel-VariableFont_wght.TTF);
+}
+
+@font-face {
+    font-family: xefora;
+    src: url(../fonts/Xefora-vp34.TTF);
+}
+
+.hp-font {
+    font-family: hp;
+}
+
+.hp-font2 {
+    font-family: xefora;
+}
+
+body {
+    background: #eeba30;
+    color: #f5e32b;
+    font-family: cinzel;
+}
+
+.container {
+    background: #ae0001;
+}
+
+nav {
+    background: #e53935;
+}
+
+.brand-logo {
+    margin-left: 16px;
+}
+
+.section {
+    padding: 10px;
+}
+
+p {
+    font-size: 24px;
+}

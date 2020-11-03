@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Compendium</title>
+    <link rel="icon" type="image/png" href="hp-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container z-depth-1 hoverable">
+        <nav class="nav-extended hoverable">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo hp-font">Harry Potter Compendium</a>
+                
+                <ul id="nav-mobile" class="right">
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Characters</a></li>
+                    <li><a href="#">Potions</a></li>
+                    <li><a href="#">Spells</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><b><a>Choose Your Theme:</a></b></li>
+                    <li class="tab"><a id="gryffindor-button">Gryffindor</a></li>
+                    <li class="tab"><a id="slytherin-button">Slytherin</a></li>
+                    <li class="tab"><a id="hufflepuff-button">Hufflepuff</a></li>
+                    <li class="tab"><a id="ravenclaw-button">Ravenclaw</a></li>
+                    <li class="tab"><a id="flip-colors">Flip Colors</a></li>
+                </ul>
+            </div>
+        </nav>
+        {{{body}}}
+    </div>
+    <script src="theme.js"></script>
+</body>
+</html>
