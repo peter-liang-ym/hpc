@@ -23,7 +23,6 @@ const slytherin = {
     textSwitched: '#b1b1b1',
     navSwitched: '#2b6b3e'
 };
-
 const hufflepuff = {
     background: '#f7d600',
     container: '#858585',
