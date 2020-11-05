@@ -50,3 +50,22 @@ p {
 input[type='text'] {
     font-family: cinzel;
 }
+
+.char {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.entry {
+    color: #f5e32b;
+}
+
+.table-container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+tr {
+    border: none;
+}

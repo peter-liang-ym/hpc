@@ -6,6 +6,7 @@ const flip = document.querySelector('#flip-colors');
 const body = document.querySelector('body');
 const container = document.querySelector('.container');
 const nav = document.querySelector('nav');
+const links = document.querySelectorAll('.entry');
 
 const gryffindor = {
     background: '#eeba30',
@@ -54,6 +55,9 @@ gryffindorBtn.addEventListener('click', () => {
     body.style.color = gryffindor.text;
     container.style.background = gryffindor.container;
     nav.style.background = gryffindor.nav;
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.color = gryffindor.text;
+    }
     bodyBackground = gryffindor.background;
     containerBackground = gryffindor.container;
     navBackground = gryffindor.nav;
@@ -67,6 +71,9 @@ slytherinBtn.addEventListener('click', () => {
     body.style.color = slytherin.text;
     container.style.background = slytherin.container;
     nav.style.background = slytherin.nav;
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.color = slytherin.text;
+    }
     bodyBackground = slytherin.background;
     containerBackground = slytherin.container;
     navBackground = slytherin.nav;
@@ -80,6 +87,9 @@ hufflepuffBtn.addEventListener('click', () => {
     body.style.color = hufflepuff.text;
     container.style.background = hufflepuff.container;
     nav.style.background = hufflepuff.nav;
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.color = hufflepuff.text;
+    }
     bodyBackground = hufflepuff.background;
     containerBackground = hufflepuff.container;
     navBackground = hufflepuff.nav;
@@ -93,6 +103,9 @@ ravenclawBtn.addEventListener('click', () => {
     body.style.color = ravenclaw.text;
     container.style.background = ravenclaw.container;
     nav.style.background = ravenclaw.nav;
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.color = ravenclaw.text;
+    }
     bodyBackground = ravenclaw.background;
     containerBackground = ravenclaw.container;
     navBackground = ravenclaw.nav;
@@ -101,17 +114,24 @@ ravenclawBtn.addEventListener('click', () => {
 });
 
 flip.addEventListener('click', () => {
+    console.log(switched, currentColorScheme);
     if (switched % 2 === 0) {
         body.style.color = currentColorScheme.textSwitched;
         nav.style.background = currentColorScheme.navSwitched;
         body.style.background = currentColorScheme.container;
         container.style.background = currentColorScheme.background;
+        for (let i = 0; i < links.length; i++) {
+            links[i].style.color = currentColorScheme.textSwitched;
+        }
     }
     else {
         body.style.color = currentColorScheme.text;
         nav.style.background = currentColorScheme.nav;
         body.style.background = currentColorScheme.background;
         container.style.background = currentColorScheme.container;
+        for (let i = 0; i < links.length; i++) {
+            links[i].style.color = currentColorScheme.text;
+        }
     }
     switched += 1;
 });

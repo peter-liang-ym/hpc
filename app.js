@@ -2,10 +2,13 @@
 
 const express = require('express');
 const exphbs = require('express-handlebars');
+const fs = require('fs');
 const path = require('path');
 const logger = require('./middleware/logger');
 const moment = require('moment');
-const { resolveSoa } = require('dns');
+const characters = require('./data/characters.json');
+const potions = require('./data/potions.json');
+const spells = require('./data/spells.json');
 
 const app = express();
 
@@ -22,15 +25,24 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/characters', (req, res) => {
+    res.render('characters', { characters });
+});
+
+app.get('/potions', (req, res) => {
+    res.render('potions', { potions });
+});
+
+app.get('/spells', (req, res) => {
+    res.render('spells', { spells });
+});
+
 app.get('/search', (req, res) => {
     res.render('search');
 });
 
 app.post('/search', (req, res) => {
     const terms = req.body.search.toLowerCase().trim().replace(/  /g, ' ').split(' ');
-    const characters = require('./data/characters.json');
-    const potions = require('./data/potions.json');
-    const spells = require('./data/spells.json');
 
     const characterFound = characters.filter(character => {
         let found = false;
@@ -70,7 +82,7 @@ app.post('/search', (req, res) => {
     });
 
     const found = [...characterFound,...potionFound,...spellFound];
-    res.json(found);
+    res.render('search_results', { found });
 });
 
 const port = process.env.PORT || 3000;

@@ -1,0 +1,35 @@
+<div class="table-container">
+    <table class="centered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        {{#each found}}
+        <tr>
+        {{#if this.Gender}}
+            <td>
+                <a href="/character?id={{this.Id}}">{{this.Name}}</a>
+            </td>
+            <td>Character</td>
+        {{else}}
+            {{#if this.Incantation}}
+                <td>
+                    <a href="/spell?id={{this.Id}}">{{this.Name}}</a>
+                </td>
+                <td>Spell</td>
+            {{else}}
+                <td>
+                    <a href="/potion?id={{this.Id}}">{{this.Name}}</a>
+                </td>
+                <td>Potion</td>
+            {{/if}}
+        {{/if}}
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
