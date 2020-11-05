@@ -20,6 +20,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'views')));
+app.use('/api', require('./routes/api/api.js'));
+app.use('/api/search', require('./routes/api/search.js'));
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -99,7 +101,7 @@ app.post('/search', (req, res) => {
     });
     const potionFound = potions.filter(potion => {
         let found = false;
-        const values = Object.values(potion).slice(1);
+        const values = Object.values(potion).slice(0, -1);
         for (let term of terms) {
             values.forEach(value => {
                 let toMatch = value;
@@ -111,7 +113,7 @@ app.post('/search', (req, res) => {
     });
     const spellFound = spells.filter(spell => {
         let found = false;
-        const values = Object.values(spell).slice(1);
+        const values = Object.values(spell).slice(0, -1);
         for (let term of terms) {
             values.forEach(value => {
                 let toMatch = value;
