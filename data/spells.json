@@ -52,7 +52,7 @@
       "Incantation": "Anapneo",
       "Type": "Healing spell, Vanishment",
       "Effect": "Clears airway",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 7
   },
   {
@@ -76,7 +76,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Prevents Disapparition within a certain area",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 10
   },
   {
@@ -84,7 +84,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Repels intruders",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 11
   },
   {
@@ -100,7 +100,7 @@
       "Incantation": "Aparecium",
       "Type": "Charm",
       "Effect": "Reveals hidden writing",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 13
   },
   {
@@ -145,10 +145,10 @@
   },
   {
       "Name": "Arrow-shooting spell",
-      "Incantation": "",
+      "Incantation": "Unknown",
       "Type": "Conjuration",
       "Effect": "Fires arrows from the caster's wand",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 19
   },
   {
@@ -196,7 +196,7 @@
       "Incantation": "Unknown",
       "Type": "Curse",
       "Effect": "Uncontrollable babbling",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 25
   },
   {
@@ -204,7 +204,7 @@
       "Incantation": "Unknown",
       "Type": "Transfiguration",
       "Effect": "Turns target human into a badger",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 26
   },
   {
@@ -212,7 +212,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Transforms target's bogeys into bats",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 27
   },
   {
@@ -228,7 +228,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Disguises things",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 29
   },
   {
@@ -236,7 +236,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Charms snowballs to follow and harass a designated target",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 30
   },
   {
@@ -284,7 +284,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Enhances teammates against foes",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 36
   },
   {
@@ -300,7 +300,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Makes a broomstick attempt to buck its rider off",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 38
   },
   {
@@ -308,7 +308,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Creates bubble protecting the head",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 39
   },
   {
@@ -340,7 +340,7 @@
       "Incantation": "Capacious extremis",
       "Type": "Charm",
       "Effect": "Increases interior space",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 43
   },
   {
@@ -364,23 +364,23 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Sets off a high-pitched shriek if entered",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 46
   },
   {
       "Name": "Cauldron to Sieve",
-      "Incantation": "",
+      "Incantation": "Unknown",
       "Type": "Transfiguration",
       "Effect": "Turns a cauldron into a sieve",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 47
   },
   {
       "Name": "Cauldron to badger",
-      "Incantation": "",
+      "Incantation": "Unknown",
       "Type": "Transformation",
       "Effect": "Transforms a cauldron into a badger.",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 48
   },
   {
@@ -396,7 +396,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Creates joy",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 50
   },
   {
@@ -404,7 +404,7 @@
       "Incantation": "Circumrota",
       "Type": "Charm",
       "Effect": "Rotates an object",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 51
   },
   {
@@ -428,7 +428,7 @@
       "Incantation": "Colloshoo",
       "Type": "Hex",
       "Effect": "Sticks shoes to floor",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 54
   },
   {
@@ -460,7 +460,7 @@
       "Incantation": "Unknown",
       "Type": "Curse",
       "Effect": "Irritates eyes",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 58
   },
   {
@@ -468,7 +468,7 @@
       "Incantation": "Unknown",
       "Type": "Dark charm",
       "Effect": "Makes skin appear like cornflakes",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 59
   },
   {
@@ -476,7 +476,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Conjures exploding Wizard Crackers",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 60
   },
   {
@@ -484,7 +484,7 @@
       "Incantation": "Unknown",
       "Type": "Spell",
       "Effect": "Assists the caster in cheating on written papers.",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 61
   },
   {
@@ -508,7 +508,7 @@
       "Incantation": "Defodio",
       "Type": "Charm",
       "Effect": "Carves through material",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 64
   },
   {
@@ -553,10 +553,10 @@
   },
   {
       "Name": "Desk Into Pig",
-      "Incantation": "",
+      "Incantation": "Unknown",
       "Type": "Transfiguration",
       "Effect": "Transfigures desks into pigs",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 70
   },
   {
@@ -564,7 +564,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Impairs foes",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 71
   },
   {
@@ -612,7 +612,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Dries up small bodies of water",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 77
   },
   {
@@ -633,10 +633,10 @@
   },
   {
       "Name": "Ears to kumquats",
-      "Incantation": "",
+      "Incantation": "Unknown",
       "Type": "Transfiguration",
       "Effect": "Transfigures target's ears into kumquats",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 80
   },
   {
@@ -644,7 +644,7 @@
       "Incantation": "Unknown",
       "Type": "Curse",
       "Effect": "Causes ears to wither",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 81
   },
   {
@@ -684,7 +684,7 @@
       "Incantation": "Unknown",
       "Type": "Curse",
       "Effect": "Expels entrails",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 86
   },
   {
@@ -692,7 +692,7 @@
       "Incantation": "Epoximise",
       "Type": "Transfiguration spell",
       "Effect": "Bonds two objects",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 87
   },
   {
@@ -756,7 +756,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Extinguishes fires",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 95
   },
   {
@@ -764,7 +764,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Implants a false memory in the victim",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 96
   },
   {
@@ -772,7 +772,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Minimises object's weight",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 97
   },
   {
@@ -788,7 +788,7 @@
       "Incantation": "Ferula",
       "Type": "Healing Spell, Charm, Conjuration",
       "Effect": "Bandages target",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 99
   },
   {
@@ -804,7 +804,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Conceals a secret",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 101
   },
   {
@@ -836,7 +836,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Removes a person's fingers",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 105
   },
   {
@@ -852,7 +852,7 @@
       "Incantation": "Flagrante",
       "Type": "Curse",
       "Effect": "Causes objects to burn on contact",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 107
   },
   {
@@ -884,7 +884,7 @@
       "Incantation": "Flintifors",
       "Type": "Transfiguration",
       "Effect": "Turns target into matchboxes",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 111
   },
   {
@@ -916,7 +916,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Allows an object to fly",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 115
   },
   {
@@ -948,7 +948,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Causes fur to grow on someone",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 119
   },
   {
@@ -1004,7 +1004,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Makes holding easier",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 126
   },
   {
@@ -1012,7 +1012,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Causes hair to grow longer and thicker",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 127
   },
   {
@@ -1044,7 +1044,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Causes boils to spell \"SNEAK\" on the face of a traitor",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 131
   },
   {
@@ -1068,7 +1068,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "When cast onto a map, it enables to track the movements of every person in the mapped area",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 134
   },
   {
@@ -1076,7 +1076,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "May temporarily change a transformed werewolf back into their human form (according to Gilderoy Lockhart, it cures lycanthropy)",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 135
   },
   {
@@ -1084,7 +1084,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Transforms target's tongue into a horn",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 136
   },
   {
@@ -1092,7 +1092,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Allow broomsticks to brake more easily",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 137
   },
   {
@@ -1100,7 +1100,7 @@
       "Incantation": "Unknown",
       "Type": "Dark Arts",
       "Effect": "Prepared a receptacle to become a Horcrux",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 138
   },
   {
@@ -1132,7 +1132,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Unclear, possibly causes a broomstick to attempt to hurl its rider off.",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 142
   },
   {
@@ -1140,7 +1140,7 @@
       "Incantation": "Illegibilus",
       "Type": "Charm",
       "Effect": "Makes text illegible",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 143
   },
   {
@@ -1172,7 +1172,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Invisible barrier",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 147
   },
   {
@@ -1188,7 +1188,7 @@
       "Incantation": "Unknown",
       "Type": "Transfiguration",
       "Effect": "Presumably conjuresinanimate objects",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 149
   },
   {
@@ -1244,7 +1244,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Instantly scalps hair",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 156
   },
   {
@@ -1252,7 +1252,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Detects intruders and sounds an alarm",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 157
   },
   {
@@ -1268,7 +1268,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Dulls mental abilities",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 159
   },
   {
@@ -1276,7 +1276,7 @@
       "Incantation": "Unknown",
       "Type": "Curse",
       "Effect": "Fingers become wobbly",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 160
   },
   {
@@ -1284,7 +1284,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Puts knees on backward",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 161
   },
   {
@@ -1316,7 +1316,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Leeks sprout from ears",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 165
   },
   {
@@ -1428,7 +1428,7 @@
       "Incantation": "Unknown",
       "Type": "Patented Charm",
       "Effect": "Produces special fog (for concealment of certain locations)",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 179
   },
   {
@@ -1452,7 +1452,7 @@
       "Incantation": "Molliare",
       "Type": "Charm",
       "Effect": "Invisible cushion",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 182
   },
   {
@@ -1492,7 +1492,7 @@
       "Incantation": "Mutatio Skullus",
       "Type": "Hex",
       "Effect": "Grows extra heads",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 187
   },
   {
@@ -1500,7 +1500,7 @@
       "Incantation": "Nox",
       "Type": "Charm",
       "Effect": "Extinguishes wandlight",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 188
   },
   {
@@ -1524,7 +1524,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Removes footprints",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 191
   },
   {
@@ -1593,10 +1593,10 @@
   },
   {
       "Name": "Patented Daydream Charm",
-      "Incantation": "",
+      "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Makes the user daydream for 30 minutes",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 200
   },
   {
@@ -1612,7 +1612,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Inflicts fiery hot breath",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 202
   },
   {
@@ -1628,7 +1628,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Sticks object permanently in place",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 204
   },
   {
@@ -1668,7 +1668,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Places object on target",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 209
   },
   {
@@ -1700,7 +1700,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Links objects",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 213
   },
   {
@@ -1716,7 +1716,7 @@
       "Incantation": "Protego Diabolica",
       "Type": "Dark Arts",
       "Effect": "Ring of protective black fire that only burns the caster's enemies whilst leaving their allies unharmed",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 215
   },
   {
@@ -1724,7 +1724,7 @@
       "Incantation": "Protego horribilis",
       "Type": "Charm",
       "Effect": "Summons a powerful protective barrier",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 216
   },
   {
@@ -1748,7 +1748,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Exploding firecrackers",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 219
   },
   {
@@ -1812,7 +1812,7 @@
       "Incantation": "Reverte",
       "Type": "Charm",
       "Effect": "Returns objects to their original positions or states",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 227
   },
   {
@@ -1892,7 +1892,7 @@
       "Incantation": "Unknown",
       "Type": "Charm, Transfiguration",
       "Effect": "Accelerates the growth of a rosebush",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 237
   },
   {
@@ -1900,7 +1900,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Causes a rowboat to propel itself.",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 238
   },
   {
@@ -1916,7 +1916,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Victim sneezes sardines",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 240
   },
   {
@@ -1948,7 +1948,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Seals envelopes",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 244
   },
   {
@@ -1956,7 +1956,7 @@
       "Incantation": "Unknown",
       "Type": "Transfiguration jinx",
       "Effect": "Makes tiny spikes erupt all over the victim",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 245
   },
   {
@@ -2020,7 +2020,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Makes object slippery",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 253
   },
   {
@@ -2060,7 +2060,7 @@
       "Incantation": "Unknown",
       "Type": "Curse",
       "Effect": "Causes the target's legs to become spongy",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 258
   },
   {
@@ -2076,7 +2076,7 @@
       "Incantation": "Unknown",
       "Type": "Transfiguration",
       "Effect": "Transfigures writing quills into worms",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 260
   },
   {
@@ -2084,7 +2084,7 @@
       "Incantation": "Unknown",
       "Type": "Spell",
       "Effect": "Detects those under magicaldisguise.",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 261
   },
   {
@@ -2108,7 +2108,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Expands the target",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 264
   },
   {
@@ -2124,7 +2124,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Superior perception",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 266
   },
   {
@@ -2132,7 +2132,7 @@
       "Incantation": "Surgito",
       "Type": "Counter-charm",
       "Effect": "Removes enchantments",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 267
   },
   {
@@ -2156,7 +2156,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Gives the victim a tail",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 270
   },
   {
@@ -2164,7 +2164,7 @@
       "Incantation": "Tarantallegra",
       "Type": "Jinx",
       "Effect": "Sends legs out of control",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 271
   },
   {
@@ -2188,7 +2188,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Straightens teeth",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 274
   },
   {
@@ -2196,7 +2196,7 @@
       "Incantation": "Unknown",
       "Type": "Spell",
       "Effect": "Makes objects teleport elsewhere",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 275
   },
   {
@@ -2228,7 +2228,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Causes its victim's toenails to grow alarmingly fast",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 279
   },
   {
@@ -2236,7 +2236,7 @@
       "Incantation": "Unknown",
       "Type": "Curse",
       "Effect": "Tortures, possibly by transfiguring the target to death",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 280
   },
   {
@@ -2244,7 +2244,7 @@
       "Incantation": "Unknown",
       "Type": "Jinx",
       "Effect": "Trips victim",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 281
   },
   {
@@ -2252,7 +2252,7 @@
       "Incantation": "Unknown",
       "Type": "Hex",
       "Effect": "Makes victim's ears twitch",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 282
   },
   {
@@ -2260,7 +2260,7 @@
       "Incantation": "Unknown",
       "Type": "Charm",
       "Effect": "Makes object unbreakable",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 283
   },
   {
@@ -2276,7 +2276,7 @@
       "Incantation": "Unknown",
       "Type": "Spell",
       "Effect": "Allows a witch or wizard to fly unaided",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 285
   },
   {
@@ -2300,7 +2300,7 @@
       "Incantation": "Ventus Duo",
       "Type": "Jinx",
       "Effect": "Creates a stronger jet of wind compared to Ventus",
-      "Light": "",
+      "Light": "Unknown",
       "Id": 288
   },
   {

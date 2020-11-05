@@ -63,9 +63,39 @@ input[type='text'] {
 
 .table-container {
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 180px;
 }
 
 tr {
     border: none;
+}
+
+th {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.notice {
+    font-size: 36px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.profile {
+    margin: 16px;
+}
+
+.profile-name {
+    font-size: 36px;
+}
+
+.profile-content {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.error {
+    text-align: center;
+    font-size: 56px;
+    margin: 24px;
 }

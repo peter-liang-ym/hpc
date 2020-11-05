@@ -1,35 +1,47 @@
-<div class="table-container">
-    <table class="centered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-            </tr>
-        </thead>
+{{#if notFound}}
+    <div class="notice center-align">
+        No results found for {{search_term}}.
+    </div>
+{{else}}
+    <div class="notice center-align">
+        Results for {{search_term}}:
+    </div>
+    <div class="table-container">
+        
+        <table class="centered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
 
-        <tbody>
-        {{#each found}}
-        <tr>
-        {{#if this.Gender}}
-            <td>
-                <a href="/character?id={{this.Id}}">{{this.Name}}</a>
-            </td>
-            <td>Character</td>
-        {{else}}
-            {{#if this.Incantation}}
+            <tbody>
+            {{#each characterFound}}
+            <tr>
                 <td>
-                    <a href="/spell?id={{this.Id}}">{{this.Name}}</a>
+                    <a class="entry" href="/character?id={{this.Id}}">{{this.Name}}</a>
                 </td>
-                <td>Spell</td>
-            {{else}}
+                <td>Character</td>
+            </tr>
+            {{/each}}
+            {{#each potionFound}}
+            <tr>
                 <td>
-                    <a href="/potion?id={{this.Id}}">{{this.Name}}</a>
+                    <a class="entry" href="/potion?id={{this.Id}}">{{this.Name}}</a>
                 </td>
                 <td>Potion</td>
-            {{/if}}
+            </tr>
+            {{/each}}
+            {{#each spellFound}}
+            <tr>
+                <td>
+                    <a class="entry" href="/spell?id={{this.Id}}">{{this.Name}}</a>
+                </td>
+                <td>Spell</td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
         {{/if}}
-        </tr>
-        {{/each}}
-        </tbody>
-    </table>
-</div>
+    </div>

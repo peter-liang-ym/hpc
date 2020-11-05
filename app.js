@@ -29,6 +29,46 @@ app.get('/characters', (req, res) => {
     res.render('characters', { characters });
 });
 
+app.get('/character', (req, res) => {
+    const id = parseInt(req.query.id);
+    const character = characters.find(c => c.Id === id);
+
+    if (!character) {
+        res.render('error', {
+            error: `No character found with ID of ${id}.`
+        });
+    }
+    else {
+        res.render('character', { character });
+    }
+});
+
+app.get('/potion', (req, res) => {
+    const id = parseInt(req.query.id);
+    const potion = potions.find(c => c.Id === id);
+    if (!potion) {
+        res.render('error', {
+            error: `No potion found with ID of ${id}.`
+        })
+    }
+    else {
+        res.render('potion', { potion });
+    }
+});
+
+app.get('/spell', (req, res) => {
+    const id = parseInt(req.query.id);
+    const spell = spells.find(c => c.Id === id);
+    if (!spell) {
+        res.render('error', {
+            error: `No spell found with ID of ${id}.`
+        })
+    }
+    else {
+        res.render('spell', { spell });
+    }
+});
+
 app.get('/potions', (req, res) => {
     res.render('potions', { potions });
 });
@@ -42,7 +82,8 @@ app.get('/search', (req, res) => {
 });
 
 app.post('/search', (req, res) => {
-    const terms = req.body.search.toLowerCase().trim().replace(/  /g, ' ').split(' ');
+    const search_term = req.body.search;
+    const terms = search_term.toLowerCase().trim().replace(/  /g, ' ').split(' ');
 
     const characterFound = characters.filter(character => {
         let found = false;
@@ -80,9 +121,16 @@ app.post('/search', (req, res) => {
         }
         return found;
     });
+    let notFound = false;;
+    if (characterFound.length === 0 && potionFound.length === 0 && spellFound.length === 0) notFound = true;
 
-    const found = [...characterFound,...potionFound,...spellFound];
-    res.render('search_results', { found });
+    res.render('search_results', {
+        notFound: notFound,
+        search_term,
+        characterFound,
+        potionFound,
+        spellFound
+     });
 });
 
 const port = process.env.PORT || 3000;
