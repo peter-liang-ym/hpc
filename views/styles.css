@@ -9,8 +9,8 @@
 }
 
 @font-face {
-    font-family: xefora;
-    src: url(../fonts/Xefora-vp34.TTF);
+    font-family: crimsonText;
+    src: url(../fonts/CrimsonText-Regular.TTF);
 }
 
 .hp-font {
@@ -18,7 +18,7 @@
 }
 
 .hp-font2 {
-    font-family: xefora;
+    font-family: crimsonText;
 }
 
 body {
@@ -49,6 +49,7 @@ p {
 
 input[type='text'] {
     font-family: cinzel;
+    color: #b2dfdb;
 }
 
 .char {
@@ -98,4 +99,29 @@ th {
     text-align: center;
     font-size: 56px;
     margin: 24px;
+}
+
+.choice {
+    color: #f5e32b;
+}
+
+#search-div {
+    width: 90%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-container {
+    margin: 24px;
+    background: black;
+    border-radius: 12px;
+    padding: 12px 4px 12px 4px;
+}
+
+.btn {
+    margin-top: 16px;
+}
+
+select {
+    font-family: cinzel;
 }

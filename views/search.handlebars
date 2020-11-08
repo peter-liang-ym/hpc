@@ -1,17 +1,171 @@
-<div class="row">
-    <form action="/search" method="post">
-        <div class="col s12">
-            Search for: 
-            <div class="input-field inline">
-                <input id="search_term" type="text" name="search" required>
+<div class="row" id="search-div">
+    <div class="col s3 center-align">
+        <a href="#" class="btn waves-effect waves-light" id="search-all-button">Search All</a>
+    </div>
+    <div class="col s3 center-align">
+        <a href="#" class="btn waves-effect waves-light" id="search-character-button">Search Characters</a>
+    </div>
+    <div class="col s3 center-align">
+        <a href="#" class="btn waves-effect waves-light" id="search-potion-button">Search Potions</a>
+    </div>
+    <div class="col s3 center-align">
+        <a href="#" class="btn waves-effect waves-light" id="search-spell-button">Search Spells</a>
+    </div>
+</div>
+
+<div class="form-container" id="search-all-form">
+    <div class="row center-align">
+        <form action="/search" method="post">
+            <div class="col s4 input-field">
+                <input type="text" name="name" placeholder="Name">
             </div>
-            <div class="input-field inline">
-                <select>
-                    <option value="character">Characters</option>
-                    <option value="potion">Potions</option>
-                    <option value="spell">Spells</option>
+            <div class="col s4 button-div">
+                <button class="btn waves-effect waves-light" type="submit">
+                    Search<i class="material-icons right">search</i>
+                </button>
+            </div>
+            <input type="hidden" name="group" value="all">
+        </form>
+    </div>
+</div>
+
+<div class="form-container" id="search-character-form">
+    <div class="row center-align">
+        <form action="/search" method="post">
+            <div class="col s4 input-field">
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="col s4 input-field">
+                <select name="gender" class="browser-default">
+                    <option value="a">Gender</option>
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                    <option value="a">Any</option>
                 </select>
             </div>
-        </div>
-    </form>
+            <div class="col s4 input-field">
+                <input type="text" name="birth" placeholder="Birth">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="death" placeholder="Death">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="job" placeholder="Job">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="wand" placeholder="Wand">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="patronus" placeholder="Patronus">
+            </div>
+            <div class="col s4 input-field">
+                <select name="house" class="browser-default">
+                    <option value="a">House</option>
+                    <option value="g">Gryffindor</option>
+                    <option value="s">Slytherin</option>
+                    <option value="h">Hufflepuff</option>
+                    <option value="r">Ravenclaw</option>
+                    <option value="u">Unknown</option>
+                    <option value="a">Any</option>
+                </select>
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="species" placeholder="Species">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="bloodStatus" placeholder="Blood Status">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="hairColor" placeholder="Hair Color">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="eyeColor" placeholder="Eye Color">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="loyalty" placeholder="Loyalty">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="skills" placeholder="Skills">
+            </div>
+
+            <div class="col s4 button-div">
+                <button class="btn waves-effect waves-light" type="submit">
+                    Search<i class="material-icons right">search</i>
+                </button>
+            </div>
+            <input type="hidden" name="group" value="characters">
+        </form>
+    </div>
 </div>
+
+<div class="form-container" id="search-potion-form">
+
+    <div class="row center-align">
+        <form action="/search" method="post">
+            <div class="col s4 input-field">
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="effect" placeholder="Effect">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="knownIngredients" placeholder="Known Ingredients">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="characteristics" placeholder="Characteristics">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="difficultyLevel" placeholder="Difficulty level">
+            </div>
+            <div class="col s4 button-div">
+                <button class="btn waves-effect waves-light" type="submit">
+                    Search<i class="material-icons right">search</i>
+                </button>
+            </div>
+            <input type="hidden" name="group" value="potions">
+        </form>
+    </div>
+</div>
+
+<div class="form-container" id="search-spell-form">
+    <div class="row center-align">
+        <form action="/search" method="post">
+            <div class="col s4 input-field">
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="incantation" placeholder="Incantation">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="effect" placeholder="Effect">
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" name="light" placeholder="Light">
+            </div>
+            <div class="col s4 input-field">
+                <select name="type" class="browser-default">
+                    <option value="a">Type</option>
+                    <option value="spell">Spell</option>
+                    <option value="charm">Charm</option>
+                    <option value="jinx">Jinx</option>
+                    <option value="hex">Hex</option>
+                    <option value="curse">Curse</option>
+                    <option value="counter">Counter</option>
+                    <option value="healing">Healing</option>
+                    <option value="transfiguration">Transfiguration</option>
+                    <option value="a">Any</option>
+                </select>
+            </div>
+            <div class="col s4 button-div">
+                <button class="btn waves-effect waves-light" type="submit">
+                    Search<i class="material-icons right">search</i>
+                </button>
+            </div>
+            <input type="hidden" name="group" value="spells">
+        </form>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="search.js"></script>

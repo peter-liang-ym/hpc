@@ -846,7 +846,7 @@
     "eyeColor": "Unknown",
     "Loyalty": "Lord Voldemort | Death Eaters",
     "Skills": "She is a duellist of great skill and an experienced Occlumens",
-    "Birth": 1951,
+    "Birth": "1951",
     "Death": "2 May, 1998"
   },
   {
@@ -914,7 +914,7 @@
     "eyeColor": "Blue",
     "Loyalty": "Lord Voldemort | Death Eaters",
     "Skills": "Unknown",
-    "Birth": 1955,
+    "Birth": "1955",
     "Death": "Unknown"
   },
   {
@@ -931,8 +931,8 @@
     "eyeColor": "Unknown",
     "Loyalty": "Unknown",
     "Skills": "Seeker",
-    "Birth": 1961,
-    "Death": 1979
+    "Birth": "1961",
+    "Death": "1979"
   },
   {
     "Id": 56,
@@ -1237,7 +1237,7 @@
     "eyeColor": "Pale, freckled",
     "Loyalty": "Lord Voldemort | Death Eaters",
     "Skills": "Skilled potioneer",
-    "Birth": 1962,
+    "Birth": "1962",
     "Death": "1995-1996"
   },
   {
@@ -1884,7 +1884,7 @@
     "Loyalty": "Original Order of the Phoenix",
     "Skills": "Duelling",
     "Birth": "Unknown",
-    "Death": 1981
+    "Death": "1981"
   },
   {
     "Id": 112,
@@ -1901,7 +1901,7 @@
     "Loyalty": "Original Order of the Phoenix",
     "Skills": "Duelling",
     "Birth": "Unknown",
-    "Death": 1981
+    "Death": "1981"
   },
   {
     "Id": 113,
@@ -1935,7 +1935,7 @@
     "Loyalty": "Original Order of the Phoenix",
     "Skills": "Said to be a great wizard",
     "Birth": "Unknown",
-    "Death": 1981
+    "Death": "1981"
   },
   {
     "Id": 115,
@@ -1952,7 +1952,7 @@
     "Loyalty": "Original Order of the Phoenix",
     "Skills": "Unknown",
     "Birth": "Unknown",
-    "Death": 1981
+    "Death": "1981"
   },
   {
     "Id": 116,
@@ -1969,7 +1969,7 @@
     "Loyalty": "Original Order of the Phoenix",
     "Skills": "Unknown",
     "Birth": "Unknown",
-    "Death": 1981
+    "Death": "1981"
   },
   {
     "Id": 117,
@@ -2342,7 +2342,7 @@
     "eyeColor": "Blue",
     "Loyalty": "Gellert Grindelwald's Acolytes",
     "Skills": "Duelling",
-    "Birth": 1883,
+    "Birth": "1883",
     "Death": "March, 1998"
   },
   {

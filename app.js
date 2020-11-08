@@ -1,5 +1,3 @@
-// - credit fonts
-
 const express = require('express');
 const exphbs = require('express-handlebars');
 const fs = require('fs');
@@ -17,11 +15,10 @@ app.set('view engine', 'handlebars');
 
 app.use(logger);
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'views')));
 app.use('/api', require('./routes/api/api.js'));
-app.use('/api/search', require('./routes/api/search.js'));
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -84,51 +81,120 @@ app.get('/search', (req, res) => {
 });
 
 app.post('/search', (req, res) => {
-    const search_term = req.body.search;
-    const terms = search_term.toLowerCase().trim().replace(/  /g, ' ').split(' ');
+    let characterFound = [];
+    let potionFound = [];
+    let spellFound = [];
 
-    const characterFound = characters.filter(character => {
-        let found = false;
-        const values = Object.values(character).slice(1);
-        for (let term of terms) {
-            values.forEach(value => {
-                let toMatch = value;
-                if (!isNaN(toMatch)) toMatch = toMatch.toString();
-                if (toMatch.toLowerCase().match(term)) found = true;
+    if (req.body.group === 'all') {
+        characterFound = characters;
+        potionFound = potions;
+        spellFound = spells;
+
+        const name = req.body.name;
+        
+        characterFound = characterFound.filter(character => {
+            let found = false;
+            const characterName = character.Name;
+            for (let term of name.split(' ')) {
+                if (characterName.toLowerCase().match(term.toLowerCase())) found = true;
+            }
+            return found;
+        });
+        potionFound = potionFound.filter(potion => {
+            let found = false;
+            const potionName = potion.Name;
+            for (let term of name.split(' ')) {
+                if (potionName.toLowerCase().match(term.toLowerCase())) found = true;
+            }
+            return found;
+        });
+        spellFound = spellFound.filter(spell => {
+            let found = false;
+            const spellName = spell.Name;
+            for (let term of name.split(' ')) {
+                if (spellName.toLowerCase().match(term.toLowerCase())) found = true;
+            }
+            return found;
+        });
+    }
+    else if (req.body.group === 'characters') {
+        console.log('hi');
+        characterFound = characters;
+
+        for (let key of Object.keys(req.body)) {
+            if (key === 'group') continue;
+            else if (key === 'gender') {
+                if (req.body.gender === 'm') characterFound = characterFound.filter(character => character.Gender === 'Male');
+                else if (req.body.gender === 'f') characterFound = characterFound.filter(character => character.Gender === 'Female');
+                else if (req.body.gender === 'a') continue;
+            }
+            else if (key === 'house') {
+                if (req.body.house === 'g') characterFound = characterFound.filter(character => character.House === 'Gryffindor');
+                else if (req.body.house === 's') characterFound = characterFound.filter(character => character.House === 'Slytherin');
+                else if (req.body.house === 'h') characterFound = characterFound.filter(character => character.House === 'Hufflepuff');
+                else if (req.body.house === 'r') characterFound = characterFound.filter(character => character.House === 'Ravenclaw');
+                else if (req.body.house === 'u') characterFound = characterFound.filter(character => character.House === 'Unknown');
+                else continue;
+            }
+            else {
+                let keyCopy = key;
+                characterFound = characterFound.filter(character => {
+                    let found = false;
+                    if (key !== 'bloodStatus' && key !== 'hairColor' && key !== 'eyeColor') keyCopy = key.charAt(0).toUpperCase() + key.slice(1);
+                    const value = character[keyCopy];
+                    for (let term of req.body[key].split(' ')) {
+                        if (value.toLowerCase().match(term.toLowerCase())) found = true;
+                    }
+                    return found;
+                });
+            }
+        }
+    }
+    else if (req.body.group === 'potions') {
+        potionFound = potions;
+
+        for (let key of Object.keys(req.body)) {
+            if (key === 'group') continue;
+            let keyCopy = key;
+            if (key !== 'knownIngredients' && key !== 'difficultyLevel') keyCopy = key.charAt(0).toUpperCase() + key.slice(1);
+            potionFound = potionFound.filter(potion => {
+                let found = false;
+                const value = potion[keyCopy];
+                for (let term of req.body[key].split(' ')) {
+                    if (value.toLowerCase().match(term.toLowerCase())) found = true;
+                }
+                return found;
             });
         }
-        return found;
-    });
-    const potionFound = potions.filter(potion => {
-        let found = false;
-        const values = Object.values(potion).slice(0, -1);
-        for (let term of terms) {
-            values.forEach(value => {
-                let toMatch = value;
-                if (!isNaN(toMatch)) toMatch = toMatch.toString();
-                if (toMatch.toLowerCase().match(term)) found = true;
-            });
+    }
+    else {
+        spellFound = spells;
+
+        for (let key of Object.keys(req.body)) {
+            if (key === 'group') continue;
+            else if (key === 'type') {
+                if (req.body.type === 'a') continue;
+                else spellFound = spellFound.filter(spell => spell.Type.toLowerCase().match(req.body.type));
+            }
+            else {
+                let keyCopy = key.charAt(0).toUpperCase() + key.slice(1);
+                spellFound = spellFound.filter(spell => {
+                    let found = false;
+                    const value = spell[keyCopy];
+                    for (let term of req.body[key].split(' ')) {
+                        if (value.toLowerCase().match(term.toLowerCase())) found = true;
+                    }
+                    return found;
+                });
+            }
         }
-        return found;
-    });
-    const spellFound = spells.filter(spell => {
-        let found = false;
-        const values = Object.values(spell).slice(0, -1);
-        for (let term of terms) {
-            values.forEach(value => {
-                let toMatch = value;
-                if (!isNaN(toMatch)) toMatch = toMatch.toString();
-                if (toMatch.toLowerCase().match(term)) found = true;
-            });
-        }
-        return found;
-    });
+    }
+
     let notFound = false;;
     if (characterFound.length === 0 && potionFound.length === 0 && spellFound.length === 0) notFound = true;
 
     res.render('search_results', {
         notFound: notFound,
-        search_term,
         characterFound,
         potionFound,
         spellFound
@@ -136,4 +202,4 @@ app.post('/search', (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
