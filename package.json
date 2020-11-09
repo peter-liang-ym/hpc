@@ -4,19 +4,20 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Srntrsest/hp-api.git"
+    "url": "git+https://github.com/Srntrsest/hpc.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Srntrsest/hp-api/issues"
+    "url": "https://github.com/Srntrsest/hpc/issues"
   },
-  "homepage": "https://github.com/Srntrsest/hp-api#readme",
+  "homepage": "https://github.com/Srntrsest/hpc#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
