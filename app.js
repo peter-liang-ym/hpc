@@ -1,9 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const fs = require('fs');
 const path = require('path');
 const logger = require('./middleware/logger');
-const moment = require('moment');
 const characters = require('./data/characters.json');
 const potions = require('./data/potions.json');
 const spells = require('./data/spells.json');
@@ -48,7 +46,7 @@ app.get('/potion', (req, res) => {
     if (!potion) {
         res.render('error', {
             error: `No potion found with ID of ${id}.`
-        })
+        });
     }
     else {
         res.render('potion', { potion });
@@ -61,7 +59,7 @@ app.get('/spell', (req, res) => {
     if (!spell) {
         res.render('error', {
             error: `No spell found with ID of ${id}.`
-        })
+        });
     }
     else {
         res.render('spell', { spell });
@@ -91,11 +89,11 @@ app.post('/search', (req, res) => {
         spellFound = spells;
 
         const name = req.body.name;
-        
+
         characterFound = characterFound.filter(character => {
             let found = false;
             const characterName = character.Name;
-            for (let term of name.split(' ')) {
+            for (const term of name.split(' ')) {
                 if (characterName.toLowerCase().match(term.toLowerCase())) found = true;
             }
             return found;
@@ -103,7 +101,7 @@ app.post('/search', (req, res) => {
         potionFound = potionFound.filter(potion => {
             let found = false;
             const potionName = potion.Name;
-            for (let term of name.split(' ')) {
+            for (const term of name.split(' ')) {
                 if (potionName.toLowerCase().match(term.toLowerCase())) found = true;
             }
             return found;
@@ -111,7 +109,7 @@ app.post('/search', (req, res) => {
         spellFound = spellFound.filter(spell => {
             let found = false;
             const spellName = spell.Name;
-            for (let term of name.split(' ')) {
+            for (const term of name.split(' ')) {
                 if (spellName.toLowerCase().match(term.toLowerCase())) found = true;
             }
             return found;
@@ -121,8 +119,8 @@ app.post('/search', (req, res) => {
         console.log('hi');
         characterFound = characters;
 
-        for (let key of Object.keys(req.body)) {
-            if (key === 'group') continue;
+        for (const key of Object.keys(req.body)) {
+            if (key === 'group') {continue;}
             else if (key === 'gender') {
                 if (req.body.gender === 'm') characterFound = characterFound.filter(character => character.Gender === 'Male');
                 else if (req.body.gender === 'f') characterFound = characterFound.filter(character => character.Gender === 'Female');
@@ -142,7 +140,7 @@ app.post('/search', (req, res) => {
                     let found = false;
                     if (key !== 'bloodStatus' && key !== 'hairColor' && key !== 'eyeColor') keyCopy = key.charAt(0).toUpperCase() + key.slice(1);
                     const value = character[keyCopy];
-                    for (let term of req.body[key].split(' ')) {
+                    for (const term of req.body[key].split(' ')) {
                         if (value.toLowerCase().match(term.toLowerCase())) found = true;
                     }
                     return found;
@@ -153,14 +151,14 @@ app.post('/search', (req, res) => {
     else if (req.body.group === 'potions') {
         potionFound = potions;
 
-        for (let key of Object.keys(req.body)) {
+        for (const key of Object.keys(req.body)) {
             if (key === 'group') continue;
             let keyCopy = key;
             if (key !== 'knownIngredients' && key !== 'difficultyLevel') keyCopy = key.charAt(0).toUpperCase() + key.slice(1);
             potionFound = potionFound.filter(potion => {
                 let found = false;
                 const value = potion[keyCopy];
-                for (let term of req.body[key].split(' ')) {
+                for (const term of req.body[key].split(' ')) {
                     if (value.toLowerCase().match(term.toLowerCase())) found = true;
                 }
                 return found;
@@ -170,18 +168,18 @@ app.post('/search', (req, res) => {
     else {
         spellFound = spells;
 
-        for (let key of Object.keys(req.body)) {
-            if (key === 'group') continue;
+        for (const key of Object.keys(req.body)) {
+            if (key === 'group') {continue;}
             else if (key === 'type') {
                 if (req.body.type === 'a') continue;
                 else spellFound = spellFound.filter(spell => spell.Type.toLowerCase().match(req.body.type));
             }
             else {
-                let keyCopy = key.charAt(0).toUpperCase() + key.slice(1);
+                const keyCopy = key.charAt(0).toUpperCase() + key.slice(1);
                 spellFound = spellFound.filter(spell => {
                     let found = false;
                     const value = spell[keyCopy];
-                    for (let term of req.body[key].split(' ')) {
+                    for (const term of req.body[key].split(' ')) {
                         if (value.toLowerCase().match(term.toLowerCase())) found = true;
                     }
                     return found;
@@ -190,7 +188,7 @@ app.post('/search', (req, res) => {
         }
     }
 
-    let notFound = false;;
+    let notFound = false;
     if (characterFound.length === 0 && potionFound.length === 0 && spellFound.length === 0) notFound = true;
 
     res.render('search_results', {
